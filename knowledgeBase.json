@@ -1,0 +1,86 @@
+{
+  "companyName": "NovaTech Solutions",
+  "tagline": "Premium Tech & Lifestyle Products",
+  "businessHours": "Mon-Fri: 9AM-6PM EST, Sat: 10AM-4PM EST",
+  "supportEmail": "support@novatech.com",
+  "supportPhone": "+1 (800) 555-0199",
+  "website": "https://www.novatech.com",
+
+  "shippingPolicy": {
+    "standardShipping": "3-5 business days, FREE on orders over $50",
+    "expressShipping": "1-2 business days, $14.99 flat fee",
+    "internationalShipping": "7-14 business days, rates calculated at checkout",
+    "processingTime": "Orders are processed within 1 business day",
+    "trackingInfo": "A tracking link is emailed once your order ships"
+  },
+
+  "returnPolicy": {
+    "windowDays": 30,
+    "conditions": "Items must be unused, in original packaging, with all tags attached.",
+    "exceptions": "Final-sale items, digital downloads, and personalized products cannot be returned.",
+    "refundTimeline": "Refunds are processed within 5-7 business days of receiving the return.",
+    "howToReturn": "Email support@novatech.com with your order number to initiate a return."
+  },
+
+  "orderPolicy": {
+    "cancellation": "Orders can be cancelled within 1 hour of placement. After that, the item may already be in fulfillment.",
+    "modification": "Address or item changes must be requested within 1 hour of placing the order.",
+    "damagedItems": "If your item arrives damaged, contact us within 48 hours with a photo and we will reship or refund immediately."
+  },
+
+  "paymentMethods": ["Visa", "MasterCard", "American Express", "PayPal", "Apple Pay", "Google Pay", "Shop Pay"],
+
+  "promotions": {
+    "note": "Only promotions listed on our official website or in your email are valid. We cannot apply discounts not currently active."
+  },
+
+  "faqs": [
+    {
+      "question": "How do I track my order?",
+      "answer": "Once your order ships, you'll receive a tracking email. You can also provide your Order ID (e.g. #12345) here and I'll look it up for you."
+    },
+    {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept Visa, MasterCard, American Express, PayPal, Apple Pay, Google Pay, and Shop Pay."
+    },
+    {
+      "question": "How long does shipping take?",
+      "answer": "Standard shipping takes 3-5 business days (FREE over $50). Express shipping is 1-2 business days for $14.99."
+    },
+    {
+      "question": "Can I return an item?",
+      "answer": "Yes! We accept returns within 30 days of purchase. Items must be unused and in original packaging. Email support@novatech.com to start the process."
+    },
+    {
+      "question": "Can I cancel or change my order?",
+      "answer": "Orders can be modified or cancelled within 1 hour of placement. Please contact us immediately at support@novatech.com."
+    },
+    {
+      "question": "My item arrived damaged. What do I do?",
+      "answer": "We're so sorry to hear that! Please email support@novatech.com within 48 hours with a photo of the damage and your order number, and we'll reship or refund right away."
+    },
+    {
+      "question": "Do you ship internationally?",
+      "answer": "Yes, we ship to most countries. International shipping takes 7-14 business days and rates are calculated at checkout."
+    },
+    {
+      "question": "How long do refunds take?",
+      "answer": "Once we receive your return, refunds are processed within 5-7 business days back to your original payment method."
+    },
+    {
+      "question": "Do you have a warranty?",
+      "answer": "Most of our products come with a 1-year manufacturer warranty. Please check the product page for specific warranty details."
+    },
+    {
+      "question": "Can you apply a discount code?",
+      "answer": "Discount codes must be applied at checkout. I'm unable to apply codes retroactively, and only codes listed on our official website or in your email are valid."
+    }
+  ],
+
+  "escalationTriggers": ["speak to human", "talk to agent", "real person", "supervisor", "manager", "this is unacceptable", "furious", "outraged", "legal", "lawsuit", "scam"],
+
+  "orderStatusSimulation": {
+    "note": "This is a demo simulation. In production, connect to your order management system.",
+    "statuses": ["Processing", "Confirmed", "Packed", "Shipped", "Out for Delivery", "Delivered"]
+  }
+}

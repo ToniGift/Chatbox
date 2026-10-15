@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>NovaTech Solutions — AI Customer Support</title>
+  <meta name="description" content="NovaTech Solutions AI-powered customer support chat widget. Get instant answers about orders, shipping, and returns." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/style.css" />
+</head>
+<body>
+
+  <!-- ═══════════════════════════ LANDING PAGE ═══════════════════════════ -->
+  <div class="page-wrapper">
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <div class="nav-inner">
+        <div class="nav-brand">
+          <span class="nav-logo">⚡</span>
+          <span class="nav-name">NovaTech</span>
+          <span class="nav-badge">AI Support</span>
+        </div>
+        <div class="nav-links">
+          <a href="#features">Features</a>
+          <a href="#embed">Embed</a>
+          <a href="#test">Test It</a>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+      <div class="hero-glow hero-glow--1"></div>
+      <div class="hero-glow hero-glow--2"></div>
+      <div class="hero-content">
+        <div class="hero-eyebrow">
+          <span class="eyebrow-dot"></span>
+          Powered by Google Gemini 2.5 Flash
+        </div>
+        <h1 class="hero-title">
+          Customer Support<br />
+          <span class="hero-title--accent">Reimagined with AI</span>
+        </h1>
+        <p class="hero-subtitle">
+          Drop a two-line snippet into any website and give your customers instant, policy-grounded answers — 24/7, without adding headcount.
+        </p>
+        <div class="hero-actions">
+          <button class="btn btn--primary" onclick="window.chatWidget && window.chatWidget.open()">
+            💬 Try the Demo
+          </button>
+          <a href="#embed" class="btn btn--ghost">View Embed Code →</a>
+        </div>
+        <div class="hero-stats">
+          <div class="stat">
+            <span class="stat-value">&lt; 1.5s</span>
+            <span class="stat-label">Response Time</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-value">10-Turn</span>
+            <span class="stat-label">Context Memory</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat-value">Zero</span>
+            <span class="stat-label">Hallucinations</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Features Section -->
+    <section class="features" id="features">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 class="section-title">Everything you need. Nothing you don't.</h2>
+          <p class="section-subtitle">Built to handle real customer conversations without a single line of backend code from your team.</p>
+        </div>
+        <div class="features-grid">
+
+          <div class="feature-card">
+            <div class="feature-icon">🧠</div>
+            <h3>Policy Grounded AI</h3>
+            <p>All responses are anchored to your <code>knowledgeBase.json</code>. Nova never invents policies, prices, or promo codes.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">💬</div>
+            <h3>Multi-Turn Memory</h3>
+            <p>Retains up to 10 conversation turns so customers don't repeat themselves. "Can I exchange them?" works after "I bought shoes."</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">📦</div>
+            <h3>Order Tracking</h3>
+            <p>Automatically detects order numbers like #48291 and returns a realistic status update from your order system.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🔌</div>
+            <h3>2-Line Embed</h3>
+            <p>Paste one <code>&lt;link&gt;</code> and one <code>&lt;script&gt;</code> tag before <code>&lt;/body&gt;</code>. Works on Shopify, WordPress, Webflow, or raw HTML.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">🛡️</div>
+            <h3>Graceful Escalation</h3>
+            <p>Detects anger signals and explicit requests for human agents — immediately provides support email, phone, and business hours.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">⚡</div>
+            <h3>Offline Demo Mode</h3>
+            <p>No API key? No problem. A smart keyword fallback keeps the full experience working during evaluation or outages.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Test Scenarios Section -->
+    <section class="test-section" id="test">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 class="section-title">Try these scenarios</h2>
+          <p class="section-subtitle">Click any scenario to instantly test it in the chat widget →</p>
+        </div>
+        <div class="scenarios-grid">
+          <button class="scenario-card" onclick="sendScenario('Where is my order #48291?')">
+            <span class="scenario-icon">📦</span>
+            <span class="scenario-title">Order Tracking</span>
+            <span class="scenario-msg">"Where is my order #48291?"</span>
+          </button>
+          <button class="scenario-card" onclick="sendScenario('Can I return something after 45 days?')">
+            <span class="scenario-icon">🔄</span>
+            <span class="scenario-title">Policy Grounding</span>
+            <span class="scenario-msg">"Can I return after 45 days?"</span>
+          </button>
+          <button class="scenario-card" onclick="sendScenario('I want to speak with a human agent')">
+            <span class="scenario-icon">👤</span>
+            <span class="scenario-title">Human Escalation</span>
+            <span class="scenario-msg">"I want a human agent"</span>
+          </button>
+          <button class="scenario-card" onclick="sendScenario('Write me a Python script to scrape websites')">
+            <span class="scenario-icon">🚫</span>
+            <span class="scenario-title">Scope Deflection</span>
+            <span class="scenario-msg">"Write me a Python script"</span>
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Embed Code Section -->
+    <section class="embed-section" id="embed">
+      <div class="section-inner">
+        <div class="section-header">
+          <h2 class="section-title">Embed in any website</h2>
+          <p class="section-subtitle">Add these two lines before <code>&lt;/body&gt;</code> on any page.</p>
+        </div>
+        <div class="code-block">
+          <div class="code-block-header">
+            <span class="code-block-lang">HTML</span>
+            <button class="code-copy-btn" onclick="copyEmbedCode()" id="copyBtn">Copy</button>
+          </div>
+          <pre class="code-block-body"><code id="embedCode">&lt;!-- NovaTech Support Widget --&gt;
+&lt;link rel="stylesheet" href="http://your-server:3000/style.css" /&gt;
+&lt;div id="support-chat-root"&gt;&lt;/div&gt;
+&lt;script src="http://your-server:3000/app.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-brand">
+          <span>⚡ NovaTech Solutions</span>
+          <span class="footer-sep">·</span>
+          <span>AI Customer Support Demo</span>
+        </div>
+        <div class="footer-links">
+          <span>support@novatech.com</span>
+          <span class="footer-sep">·</span>
+          <span>+1 (800) 555-0199</span>
+        </div>
+      </div>
+    </footer>
+
+  </div><!-- end .page-wrapper -->
+
+  <!-- ═══════════════════════════ CHAT WIDGET ═══════════════════════════ -->
+  <div id="chat-widget-root"></div>
+  <script src="/app.js"></script>
+
+  <script>
+    // Scenario helper — opens chat + sends message
+    function sendScenario(msg) {
+      if (window.chatWidget) {
+        window.chatWidget.open();
+        setTimeout(() => window.chatWidget.sendMessage(msg), 300);
+      }
+    }
+
+    // Copy embed code
+    function copyEmbedCode() {
+      const code = document.getElementById('embedCode').textContent;
+      navigator.clipboard.writeText(code).then(() => {
+        const btn = document.getElementById('copyBtn');
+        btn.textContent = 'Copied!';
+        setTimeout(() => btn.textContent = 'Copy', 2000);
+      });
+    }
+  </script>
+
+</body>
+</html>
